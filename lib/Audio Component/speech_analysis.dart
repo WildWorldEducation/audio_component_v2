@@ -10,7 +10,7 @@ class SpeechAnalysis extends StatefulWidget {
 }
 
 class _SpeechAnalysisState extends State<SpeechAnalysis> {
-  SpeechToText _speechToText = SpeechToText();
+  final SpeechToText _speechToText = SpeechToText();
   bool _speechEnabled = false;
   String _lastWords = '';
   String _pronounciationResult = '';
@@ -91,7 +91,7 @@ class _SpeechAnalysisState extends State<SpeechAnalysis> {
                     ))),
             Padding(
               padding: EdgeInsets.all(16),
-              child: Text(_speechToText.isListening ? '$_lastWords' : '',
+              child: Text(_speechToText.isListening ? _lastWords : '',
                   style: const TextStyle(color: Colors.white, fontSize: 20)),
             ),
             Align(

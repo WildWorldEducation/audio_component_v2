@@ -22,9 +22,9 @@ class AudioComponentGame extends FlameGame with ScrollDetector, ScaleDetector {
   Future<void> onLoad() async {
     await super.onLoad();
 
-    camera.viewport = FixedResolutionViewport(viewportResolution);
-    camera.setRelativeOffset(Anchor.topLeft);
-    camera.speed = 1;
+    // camera.viewport = FixedResolutionViewport(viewportResolution);
+    // camera.setRelativeOffset(Anchor.topLeft);
+    // camera.speed = 1;
 
     await add(_background);
     add(_wordAnimation);
